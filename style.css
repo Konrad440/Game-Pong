@@ -81,7 +81,7 @@ html {
     text-align: center;
     font-family: sans-serif;
  
-    color: black;
+    color: red;
     transform: scale(0);
     /* Utwórz animację, któa pokaże wynik po zakończeniu gry */
     animation: showResult 1s calc(var(--animationTime) + 1s) both;
@@ -105,11 +105,78 @@ html {
      /* left: calc(var(--tableWidth) - var(--paddleFromEdge) - var(--paddleWidth) - var(--ballSize)); */
      left: 605px;
     }
+    40% {
+      left: 390px;
+      top: 380px;
+    }
+    60% {
+      left: 75px;
+      top:80px;
+    }
+    80% {
+      left: 390px;
+      top:0;
+    }
+    100%{
+      left:700px;
+      top:50px;
+    }
  
    }
  
-   @keyframes playerPaddle {}
+   @keyframes playerPaddle {
+      20% {
+        top:250px;
+      }
+      30% {
+        top:320px;
+      }
+      40% {
+        top:250px;
+      }
+      60% {
+        top:50px;
+      }
+      70% {
+        top:40px;
+      }
+      80% {
+        top: 10px;
+      }
+      90% {
+        top: 20px;
+      }
+   }
  
-   @keyframes aiPaddle {}
+   @keyframes aiPaddle {
+    10% {
+      top: 250px;
+    }
+    30% {
+      top: 320px;
+    }
+    40% {
+      top: 250px;
+    }
+    60% {
+      top: 200px;
+    }
+    70% {
+      top: 140px;
+    }
+    80% {
+      top:40px;
+    }
+   }
  
-   @keyframes showResult {}
+   @keyframes showResult {
+      30% {
+        transform: scale(0);
+      }
+      70%{
+        transform:scale(0);
+      }
+      100%{
+        transform: scale(1);
+      }
+   }
